@@ -4,11 +4,16 @@
 
 .top-row {
     min-height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    /* background-color: rgba(0,0,0,0.4); */
+    background-color: linear-gradient(90deg, #000 40%, #121212 100%);
+    /* background-image: repeating-radial-gradient(circle at center, #000 0%, #000 40%, #121212 45%, #121212 100%); */
 }
 
 .navbar-brand {
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: poppins, sans-serif;
 }
 
 .bi {
