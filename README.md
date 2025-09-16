@@ -15,7 +15,7 @@
 <h3>Skills &amp; Technologies Used</h3>
 
 <p>
-    <a href="https://go-skill-icons.vercel.app/api/icons?i=cs,dotnet,sqllite,blazor,gemini,githubcopilot,git,azure&amp;titles=true&amp;theme=dark" rel="nofollow">
-        <img src="https://go-skill-icons.vercel.app/api/icons?i=cs,dotnet,sqllite,blazor,gemini,githubcopilot,git,azure&amp;titles=true&amp;theme=dark" alt="Sohaib Malik's Tech Stack and Tools">
+    <a href="https://go-skill-icons.vercel.app/api/icons?i=cs,dotnet,sqlite,blazor,gemini,githubcopilot,git,azure&amp;titles=true&amp;theme=dark" rel="nofollow">
+        <img src="https://go-skill-icons.vercel.app/api/icons?i=cs,dotnet,sqlite,blazor,gemini,githubcopilot,git,azure&amp;titles=true&amp;theme=dark" alt="Sohaib Malik's Tech Stack and Tools">
     </a>
 </p>
