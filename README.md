@@ -19,3 +19,7 @@
         <img src="https://go-skill-icons.vercel.app/api/icons?i=cs,dotnet,sqlite,blazor,gemini,githubcopilot,git,azure&amp;titles=true&amp;theme=dark" alt="Sohaib Malik's Tech Stack and Tools">
     </a>
 </p>
+
+</br>
+
+![skillsnap](https://github.com/user-attachments/assets/62023add-4b59-4b05-8677-3a07c4b58286)
