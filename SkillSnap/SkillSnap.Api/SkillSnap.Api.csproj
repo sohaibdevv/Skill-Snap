@@ -18,4 +18,22 @@
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.12.0" />
   </ItemGroup>
 
+  <!-- Publish Blazor WebAssembly client into API publish output so a single App Service can host both -->
+  <Target Name="PublishBlazorClient" AfterTargets="Publish">
+    <!-- Publish the Blazor client to an intermediate folder -->
+    <PropertyGroup>
+      <BlazorIntermediate>$(MSBuildThisFileDirectory)..\obj\BlazorPublish\$(Configuration)\</BlazorIntermediate>
+    </PropertyGroup>
+    <Message Importance="high" Text="Publishing Blazor client to intermediate path: $(BlazorIntermediate)" />
+    <Exec Command="dotnet publish ..\SkillSnap.Client\SkillSnap.Client.csproj -c $(Configuration) -o &quot;$(BlazorIntermediate)&quot;" />
+
+    <!-- Copy the published client 'wwwroot' into the API publish folder's wwwroot so it will be served by the API -->
+    <ItemGroup>
+      <BlazorDist Include="$(BlazorIntermediate)wwwroot\**\*.*" />
+    </ItemGroup>
+
+    <Message Importance="high" Text="Copying Blazor client files to API publish folder: $(PublishDir)wwwroot" />
+    <Copy SourceFiles="@(BlazorDist)" DestinationFiles="@(BlazorDist->'$(PublishDir)wwwroot\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
+  </Target>
+
 </Project>

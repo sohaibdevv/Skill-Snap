@@ -89,7 +89,14 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 // Add controller routing
+// Serve static files (Blazor client) from wwwroot
+app.UseDefaultFiles();
+app.UseStaticFiles();
+
 app.MapControllers();
+
+// Fallback to `index.html` for client-side routing
+app.MapFallbackToFile("index.html");
 
 app.Run();
 
